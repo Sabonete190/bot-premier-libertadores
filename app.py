@@ -24,7 +24,7 @@ def calcular_kelly(probabilidade, odd):
     return max(kelly, 0)
 # CONFIGURAÇÃO DA PÁGINA
 st.set_page_config(
-    page_title="Bot de Apostas",
+    page_title="Bot de libertadores",
     layout="centered"
 )
 
@@ -44,7 +44,7 @@ st.write("Preencha os dados da partida.")
 # HISTÓRICO CSV
 # =========================
 
-ARQUIVO_HISTORICO = "historico_apostas.csv"
+ARQUIVO_HISTORICO = "historico_libertadores.csv"
 
 # =========================
 # GITHUB
@@ -192,7 +192,7 @@ odd_btts_nao = st.number_input(
 # POSIÇÃO NA TABELA
 # =========================
 
-st.subheader("Tabela Brasileirão")
+st.subheader("Tabela libertadores")
 
 posicao_casa = st.number_input(
     "Posição Time Casa",
@@ -1602,7 +1602,7 @@ if st.button("Salvar Resultado"):
         "Lucro": round(lucro, 2)
     }
 
-    arquivo_resultados = "resultados_apostas.csv"
+    arquivo_resultados = "resultados_libertadores.csv"
 
     df_novo = pd.DataFrame(
         [dados_resultado]
@@ -1651,7 +1651,7 @@ if st.button("Salvar Resultado"):
 # ESTATÍSTICAS DO BOT
 # =========================
 
-arquivo_resultados = "resultados_apostas.csv"
+arquivo_resultados = "resultados_libertadores.csv"
 
 if os.path.exists(arquivo_resultados):
 
