@@ -352,7 +352,7 @@ campeonato = st.text_input(
 
 media_gols_liga = 2.19
 
-media_btts_liga = 0.48
+media_btts_liga = 0.43
 
 media_over25_liga = 0.36
 
