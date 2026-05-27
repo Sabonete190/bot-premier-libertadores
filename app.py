@@ -24,7 +24,7 @@ def calcular_kelly(probabilidade, odd):
     return max(kelly, 0)
 # CONFIGURAÇÃO DA PÁGINA
 st.set_page_config(
-    page_title="Bot de libertadores",
+    page_title="Bot libertadores",
     layout="centered"
 )
 
@@ -188,18 +188,7 @@ odd_btts_nao = st.number_input(
     min_value=1.0,
     step=0.01
 )
-# =========================
-# POSIÇÃO NA TABELA
-# =========================
 
-st.subheader("Tabela libertadores")
-
-posicao_casa = st.number_input(
-    "Posição Time Casa",
-    min_value=1,
-    max_value=20,
-    value=10
-)
 
 posicao_fora = st.number_input(
     "Posição Time Fora",
@@ -368,17 +357,7 @@ media_empate_liga = 0.23
 
 if st.button("Analisar Jogo"):
 
-    # =========================
-    # FORÇA DA TABELA
-    # =========================
-
-    forca_tabela_casa = (
-        (21 - posicao_casa) / 20
-    )
-
-    forca_tabela_fora = (
-        (21 - posicao_fora) / 20
-    )
+    
     # =========================
     # FORÇA OFENSIVA
     # =========================
@@ -390,8 +369,6 @@ if st.button("Analisar Jogo"):
     chutes_casa * 0.20 +
 
     eficiencia_casa * 0.15 +
-
-    forca_tabela_casa * 0.10 +
 
     (forma_casa / 15) * 0.10 +
 
@@ -405,8 +382,6 @@ if st.button("Analisar Jogo"):
     chutes_fora * 0.20 +
 
     eficiencia_fora * 0.15 +
-
-    forca_tabela_fora * 0.10 +
 
     (forma_fora / 15) * 0.10 +
 
@@ -559,13 +534,7 @@ if st.button("Analisar Jogo"):
     # AJUSTE DA LIGA
     # =========================
 
-    ajuste_liga_gols = (
-        media_gols_liga / 2.50
-    )
-
-    total_gols_esperados *= (
-        ajuste_liga_gols
-    )
+    
 
     prob_under25 = 0
 
@@ -638,7 +607,7 @@ if st.button("Analisar Jogo"):
 
         * media_btts_liga
 
-        / 0.50
+        / 0.43
     )
 
     prob_btts_sim = min(
