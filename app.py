@@ -347,20 +347,20 @@ campeonato = st.text_input(
 )
 
 # =========================
-# DADOS DO BRASILEIRÃO
+# DADOS DA LIBERTADORES
 # =========================
 
-media_gols_liga = 2.63
+media_gols_liga = 2.19
 
-media_btts_liga = 0.57
+media_btts_liga = 0.48
 
-media_over35_liga = 0.49
+media_over25_liga = 0.36
 
-media_mandante_liga = 0.47
+media_mandante_liga = 0.49
 
-media_visitante_liga = 0.24
+media_visitante_liga = 0.28
 
-media_empate_liga = 0.29
+media_empate_liga = 0.23
 
 # =========================
 # BOTÃO
